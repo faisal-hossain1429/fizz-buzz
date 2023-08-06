@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project by Faisal Hossain</title>
+    <title>Fizz Fizz: A Coding Project by Faisal Hossain</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +27,7 @@
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">APP NAME</a>
+            <a class="navbar-brand" href="index.html">Fizz Fizz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,57 @@
 
     <main class="flex-shrink-0">
 
-        <div class="container"></div>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col-6 mt-5 border-end border-3">
+                    <h1 class="fw-bold lh-1">Fizz Fizz: A coding project</h5>
+                    <h5 class="lead text-black">   Living life in loops: A javascript program that displays numbers 1-100. Multiples of 3 display <strong>fizz</strong>, multiples of 5 display <strong>fizz fizz</strong>, and a multiple of both will display <strong>fizz buzz</strong>
+                    </h5>
+
+                    <div class="mt-4">
+                    <h1 class="fw-bold lh-1">Instructions</h1>
+                    <h5 class="lead text-black"> Choose a range and press the button</h5>
+                    </div>
+                </div>
+
+                <div class="col-6 mt-5">
+
+                    <h1>Enter Values</h1>
+                    <form class="row gy-2 gx-3">
+
+                        <div class="col">
+                            <input id="fizzValue" type="number" class="form-control" placeholder="Fizz Value" value="3" aria-label="Fizz Value">
+                        </div>
+
+                        <div class="col">
+                            <input id="buzzValue" type="number" class="form-control" placeholder="Buzz Value" value="5" aria-label="Buzz Value">
+                        </div>
+
+                        <div class="col-12 d-flex justify-content-end">
+                            <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Buzz it</button>
+                        </div>
+
+                    </form>
+
+                    <div class="col">
+                        <h1>Fizz Results</h1>
+                        <hr>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped table-sm">
+                                <tbody id="results">
+                                    <!--Results GO Here, this part will be written by javascript-->
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
 
     </main>
 
@@ -70,11 +120,24 @@
         </div>
     </footer>
 
+    <template id="fbTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
     <script src="/js/site.js"></script>
+    <script>
+            document.getElementById("btnSubmit").addEventListener("click", getValue);
+    </script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 :root{
-    --primary-color:#1d5888;
+    --primary-color:#08d474;
     --secondary-color:#ff993b;
     --dark-color:#292929;
     --white-color:#dff3e4;
@@ -54,4 +54,18 @@ pre[class*="language-"] {
 white-space: pre-wrap;
 word-break: break-all;
 word-wrap: break-word;
+}
+
+
+.Fizz{
+    color:lightgreen;
+}
+
+.Buzz{
+    color: darkgreen;
+}
+
+.FizzBuzz{
+    color: purple;
+    font-weight: bold;
 }
